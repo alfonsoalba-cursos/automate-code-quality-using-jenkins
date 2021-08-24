@@ -12,3 +12,7 @@ update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
 # Instala Jenkins
 sudo apt-get install -y jenkins
+
+# Clone repositoriess
+git clone https://github.com/alfonsoalba-cursos/armstrong-number-c
+git clone https://github.com/alfonsoalba-cursos/armstrong-number-java
