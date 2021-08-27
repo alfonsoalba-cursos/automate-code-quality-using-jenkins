@@ -6,12 +6,12 @@ sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
   /etc/apt/sources.list.d/jenkins.list'
 apt-get update
 apt-get upgrade -y
-# Añade openjdk-8 para poder ejecutar jenkins y openjdk-16 para compilar la app en Java
+# Add openjdk-8 to tun jenkikns and openjdk-16 to be able to compile our java application
 apt-get install -y openjdk-8-jdk openjdk-16-jdk
-# Selecciona Java 8 por defecto, que es la versión que utiliza Jenkins
+# Set Java 8 as the default java version, since this is the recommended version to run Jenkins
 update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
-# Instala Jenkins
+# Install Jenkins
 apt-get install -y jenkins
 
 # Clone repositories
