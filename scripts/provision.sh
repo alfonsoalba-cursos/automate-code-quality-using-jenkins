@@ -14,6 +14,7 @@ update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 # Instala Jenkins
 apt-get install -y jenkins
 
-# Clone repositoriess
-sudo -u vagrant git clone https://github.com/alfonsoalba-cursos/armstrong-number-c
-sudo -u vagrant git clone https://github.com/alfonsoalba-cursos/armstrong-number-java
+# Clone repositories
+sudo -u vagrant mkdir /home/vagrant/teacher_repositories
+sudo -u vagrant git clone https://github.com/alfonsoalba-cursos/armstrong-number-c /home/vagrant/teacher_repositories/armstrong-number-c
+sudo -u vagrant git clone https://github.com/alfonsoalba-cursos/armstrong-number-java /home/vagrant/teacher_repositories/armstrong-number-java
