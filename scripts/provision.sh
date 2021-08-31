@@ -6,13 +6,16 @@ sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
   /etc/apt/sources.list.d/jenkins.list'
 apt-get update
 apt-get upgrade -y
-# Add openjdk-11 to tun jenkikns and openjdk-16 to be able to compile our java application
-apt-get install -y openjdk-11-jdk openjdk-16-jdk
-# Set Java 11 as the default java version, since this is the recommended version to run Jenkins
-update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/jre/bin/java
+# Add openjdk-11 tu run jenkins
+apt-get install -y openjdk-11-jdk 
 
 # Install Jenkins
 apt-get install -y jenkins
+
+# Install openjdk-16-jdk
+apt-get install -y openjdk-16-jdk
+# Set Java 11 as the default java version, since this is the recommended version to run Jenkins
+update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
 
 # Clone repositories
 sudo -u vagrant mkdir /home/vagrant/teacher_repositories
